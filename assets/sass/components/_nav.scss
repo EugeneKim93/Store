@@ -1,0 +1,39 @@
+.nav__items {
+	display: flex;
+	list-style: none;
+}
+.nav__item {
+	margin-left: 20px;
+	position: relative;
+	.fa {
+			display: inline-block;
+			margin-left: 5px;
+			transform:rotate(0);
+			transition:.3s;
+		}
+	&:hover {
+		.fa {
+				transform: rotate(90deg);
+		}
+	}
+}
+.nav__link {
+	text-decoration: none;
+}
+.nav__dropdown {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	padding: 0;
+	margin: 0;
+	max-height: 0;
+	overflow: hidden;
+	.nav__item {
+		padding: 8px 0;
+		margin-left: 0;
+	}
+	.nav__item:hover & {
+		max-height: 1000px;
+	}
+}
